@@ -1,17 +1,14 @@
 #lang racket
 
 (define (collatz-list n)
-  (define l (list ))
-  (collatz-listAUX n l))
+  (collatz-listAUX n))
   
-(define (collatz-listAUX n l)
-  (append l n)
-  l
-  (if (= n 1) l 
+(define (collatz-listAUX n)
+  (if (= n 1) (cons 1 null) 
 
-  (if (= (remainder n 2) 0) ; 
-       (collatz-listAUX (/ n 2) l)
-       (collatz-listAUX (+ (* 3 n) 1) l)))
+  (if (= (remainder n 2) 0) ; else 
+       (cons n (collatz-listAUX (/ n 2))) ;t
+       (cons n (collatz-listAUX (+ (* 3 n) 1))))) ;f
   )
 
-(collatz-list 3)
+(collatz-list 5)
