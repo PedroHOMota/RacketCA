@@ -6,7 +6,6 @@
   );end rcycle
 
 (define (rcycleAux l)
-  (write l)
   (if (null? (cdr l))
       null
       (cons (car l) (rcycleAux (cdr l)))
