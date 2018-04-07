@@ -10,20 +10,7 @@ confirm their use with the lecturer.
 
 ```
 
-
-## Functional programming
-
-```In computer science, functional programming is a programming paradigm—a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. In functional code, the output value of a function depends only on the arguments that are passed to the function, so calling a function f twice with the same value for an argument x produces the same result f(x) each time; this is in contrast to procedures depending on a local or global state, which may produce different results at different times when called with the same arguments but a different program state. Eliminating side effects, i.e., changes in state that do not depend on the function inputs, can make it much easier to understand and predict the behavior of a program, which is one of the key motivations for the development of functional programming.```
-
-```Functional programming has its origins in lambda calculus, a formal system developed in the 1930s to investigate computability, the Entscheidungsproblem, function definition, function application, and recursion. Many functional programming languages can be viewed as elaborations on the lambda calculus. Another well-known declarative programming paradigm, logic programming, is based on relations.```
-
-```In contrast, imperative programming changes state with commands in the source code, the simplest example being assignment. Imperative programming does have subroutine functions, but these are not functions in the mathematical sense. They can have side effects that may change the value of program state. Functions without return values therefore make sense. Because of this, they lack referential transparency, i.e., the same language expression can result in different values at different times depending on the state of the executing program.```
-
-<p align="right" bold>
-<i>Source: <a href="https://en.wikipedia.org/wiki/Functional_programming">Wikipedia</a></i>
-</p>
-
-## DrRacket
+## Racket
 
 Racket is a general-purpose programming language as well as the world’s first ecosystem for developing and deploying new languages. [DrRacket](https://racket-lang.org/) is a graphical IDE that’s integrated with Racket’s vast documentation.
 
@@ -32,25 +19,84 @@ Racket is a general-purpose programming language as well as the world’s first 
 The following is the list of exercises contained in this repository:
  
 * Prime numbers
-* Collatz List
-* Cycle a List (either right or left)
-* Sum of sublist
-* Hamming Weight
-* Hamming Distance
+```Write, from scratch, a function in Racket that uses a brute-force algorithm that takes
+a single positive integer and return true if the number is a prime and false otherwise.
+Call the function decide-prime.
+```
 
+* Collatz List
+```
+Write, from scratch, a function in Racket that takes a positive integer n0 as input
+and returns a list by recursively applying the following operation, starting with the
+input number.
+```
+
+* Left and Right list cycle
+```
+Write, from scratch, two functions in Racket. The first is called lcycle. It takes a
+list as input and returns the list cyclically shifted one place to the left. The second
+is called rcycle, and it shifts the list cyclically shifted one place to the right.
+```
+
+* Sum of sublist
+```
+Write a function sublsum in Racket that takes a list (of integers) as input and returns
+a list of sublists of it that sum to zero. For this problem, you can use the
+combinations built-in function.
+```
+* Hamming Weight
+```
+Write a function hamming-weight in Racket that takes a list l as input and returns
+the number of non-zero elements in it.
+```
+* Hamming Distance
+```
+Write a function hamming-distance in Racket that takes two lists and returns the
+number of positions in which they differ.
+```
+
+* Maj
+```
+Write a function maj in Racket that takes three lists x, y and z of equal length and
+containing only 0’s and 1’s. It should return a list containing a 1 where two or more
+of x, y and z contain 1’s, and 0 otherwise.
+```
+
+* Chse
+```
+Write a function chse in Racket that takes three lists x, y and z of equal length and
+containing only 0’s and 1’s. It should return a list containing the elements of y in
+the positions where x is 1 and the elements of z otherwise. F
+```
+
+* Sod2
+```
+Write a function sod2 in Racket that takes three lists x, y and z of equal length and
+containing only 0’s and 1’s. It should return a list containing a 1 where the number of
+1’s in a given position in x, y and z contains an odd nubmer of 1’s, and 0 otherwise.
+```
+
+* Lstq
+```
+Write a function lstq in Racket that takes as arguments two lists l and m of equal
+length and containing numbers. It should return d, the distance given by the sum of
+the square residuals between the numbers in the lists
+```
 
 ## Installation & Running the code
 
-In order to run the exercises Racket must be installed. It can be download from [here](http://racket-lang.org/download/). To run any of the exercises symple type in the command line (*If you areusing windows make sure racket is in the path!*) the following:
+In order to run the exercises Racket must be installed. It can be download from [here](http://racket-lang.org/download/). 
+To run any of the exercises symple type in the command line (*Make sure racket is in the evironment variables*) the following:
  ```
     $: racket exercise-name.rkt
  ```
+Alternatively, the exercises can be run on Dr.Racket. To do so, just open one of the exercises and click on run.
 Where exercise name corresponds to the file name of the excercise.
 
 ## Authors
 
-* **Pedro Mota** - *Coding* - [PedroHOMota](https://github.com/rndmized)
+* **Pedro Mota** - [PedroHOMota](https://github.com/rndmized)
 
 ## Acknowledgments and References
 
-* DrRacket Documentation: [docs](https://docs.racket-lang.org/).
+* Racket Documentation: [docs](https://docs.racket-lang.org/).
